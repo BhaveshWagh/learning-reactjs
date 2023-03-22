@@ -1,23 +1,29 @@
 import React from "react";
-import "./App.css";  
+import "./App.css";
+// import ApiHit from "./components/ApiHit";,
 // import {Header} from "./components/Header";
-import Channel from "./components/Channel";
-import FunctionClick from "./components/FunctionClick";
-import Lists from "./components/Lists";
+// import Channel from "./components/Channel";
+// import FunctionClick from "./components/FunctionClick";
+// import Lists from "./components/Lists";
+// import axios from "react-axios"
+// import { useState } from "react";
+// import Testing from "./components/Testing";
+// import Stylesheet from "./components/Stylesheet";
+// import Form from "./components/Form";
+import Routing from "./Routing";
 
-
-
-function App(){
-  return(
+function App() {
+  return (
     <div>
-    <h1>Namaste ReactJs</h1>
-      <Lists/>
+      <h1>Namaste ReactJs</h1>
+      <Routing />
     </div>
-    )
+  );
 }
 export default App;
 
-// class Based 
+// <Stylesheet isvalue = {true }/>
+// class Based
 // class App extends React.Component {
 //   render() {
 //     return (
@@ -46,8 +52,6 @@ export default App;
 //       <Header name="bhavesh" last="Wagh">
 //       <p>This is child</p>
 //       // </Header>
-
-
 
 // const name = <span>Hello React</span>; //jsx
 // const newElement = React.createElement(
