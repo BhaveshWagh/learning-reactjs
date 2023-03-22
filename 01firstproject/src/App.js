@@ -1,7 +1,22 @@
 import React from "react";
-import {Header} from "./components/Header";
+import "./App.css";  
+// import {Header} from "./components/Header";
 import Channel from "./components/Channel";
-import "./App.css";
+import FunctionClick from "./components/FunctionClick";
+import Lists from "./components/Lists";
+
+
+
+function App(){
+  return(
+    <div>
+    <h1>Namaste ReactJs</h1>
+      <Lists/>
+    </div>
+    )
+}
+export default App;
+
 // class Based 
 // class App extends React.Component {
 //   render() {
@@ -14,17 +29,6 @@ import "./App.css";
 //     )
 //   }
 // }
-
-function App(){
-  return(
-    <div>
-    <h1>Namaste ReactJs</h1>
-    <Channel/>
-    </div>
-    )
-}
-export default App;
-
 
 // const age = function(a){
 //   if(a >= 18){
