@@ -1,0 +1,29 @@
+body {
+  background: #333945;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  /* text-align: center; */
+}
+
+.button {
+  background-color: #26ae60;
+  border: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  /* text-align: center; */
+  text-decoration: none;
+  font-size: 20px;
+  margin-top:5px;
+  /* margin-right: 5px; */
+  margin-left: 5px;
+
+}
+
+.button:hover{
+    cursor: pointer;
+}

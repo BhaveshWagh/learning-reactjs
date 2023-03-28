@@ -9,6 +9,11 @@ import {
   Route,
   Navigate,
   Link,
+  Outlet,
+  useParams,
+  NavLink,
+  useNavigate,
+useLocation
 } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,10 +21,13 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/myapps" element={<Navigate replace to="/learn" />} />
-      <Route path="/learn" element={<Learn />} >
-      <Route path="courses" element={<Courses />} />
-        <Route path="bundles" element={<Bundles />} /> 
+      <Route path="/learn" element={<Learn />}>
+        <Route path="courses" element={<Courses />}>
+          <Route path=":courseid" element={<CourseId />} />
+        </Route>
+        <Route path="bundles" element={<Bundles />} />
       </Route>
+      <Route path="dashboard" element={<Dashboard/>}/>
     </Routes>
   </Router>
 );
@@ -42,15 +50,29 @@ function Learn() {
       <Link className="btn btn-primary" to="/learn/bundles">
         Bundle
       </Link>
+      <Outlet />
     </React.Fragment>
   );
 }
 
 function Courses() {
+  const courseList = ["React", "Angular", "Vue", "Nodejs", "Nextjs"];
+  const randomCourseName =
+    courseList[Math.floor(Math.random() * courseList.length)];
   return (
     <React.Fragment>
       <h1>Course list</h1>
       <h4>Course card</h4>
+
+    <p>More Test</p>
+<NavLink style={({isActive})=>{
+  return{
+    backgroundColor: isActive ?  "Red"  :  "green"
+  }
+}} to={`/learn/courses/${randomCourseName}`}>{randomCourseName}</NavLink>
+<NavLink className="btn btn-light" to={`/learn/courses/tests`}>tests</NavLink>
+
+      <Outlet />
     </React.Fragment>
   );
 }
@@ -59,6 +81,31 @@ function Bundles() {
   return (
     <React.Fragment>
       <h1>Bundle list</h1>
+      <h4>Bundle card</h4>
+    </React.Fragment>
+  );
+}
+
+function CourseId() {
+  const navigate = useNavigate();
+  const { courseid } = useParams();
+  return (
+    <React.Fragment>
+      <h1>URL Params is : {courseid}</h1>
+      <button onClick={() => {
+      navigate("/dashboard",{state :"299₹"})
+      }} className="btn btn-warning">Price</button>
+      <Link to="/dashboard" state={"DJANGO"}>TestLink</Link>
+    </React.Fragment>
+  );
+}
+
+
+function Dashboard() {
+  const location = useLocation()
+  return (
+    <React.Fragment>
+      <h1>Info that i got here is {location.state} </h1>
       <h4>Bundle card</h4>
     </React.Fragment>
   );

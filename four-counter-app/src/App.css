@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  justify-self: start;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background: gray;
+  min-height: 100vh;
+  color: aliceblue;
+}
+
+button {
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 5px 25px;
+  margin: 10px;
+  font-size: 20px;
+  width: 300px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.reset{
+  background-color: #f44336;
+
+}
+
+.increase{
+  background-color: #4caf50;
+}
+
+.decrease{
+  background-color:  #2196f3;
+}
