@@ -13,11 +13,27 @@ function App() {
   };
 
   const listOfItems = () => {
-    setItems((oldItems) => {
-      return [...oldItems,inputList]
-    })
-    setInputList('')
+    if(inputList ===""){
+      return alert("Please enter a todo")
+    }
+    else{
+      setItems((oldItems) => {
+        return [...oldItems,inputList]
+      })
+      setInputList('')
+    }
+    
   };
+
+    const deleteItems = (id) => {
+      // console.log('deleted')
+      setItems((oldItems) =>{
+        return oldItems.filter( (arrEle,index) =>{
+          return index !== id;  
+        } )
+      } )
+
+    }
   return (
     <React.Fragment>
       <div className="main_div">
@@ -31,9 +47,9 @@ function App() {
           value={inputList} />
           <button onClick={listOfItems}> + </button>
           <ol>
-            {/*<li>{inputList}</li>*/}
-            {items.map((itemvalue) => { 
-              return  <TodoList text = {itemvalue}/>;
+            {/*<li>{inputList}</li>*/} 
+            {items.map((itemvalue, index) => { 
+              return  <TodoList key={index} id={index} text = {itemvalue} onSelect={deleteItems}/>;
             })}
           </ol>
         </div>
