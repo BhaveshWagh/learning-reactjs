@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import TodoList from "./TodoList";
 import "./App.css";
 
@@ -6,7 +6,7 @@ function App() {
   const [inputList, setInputList] = useState("");
   const [items, setItems] = useState([]);
 
-  useEffect(() => {});
+  // useEffect(() => {});
 
   const itemEvent = (event) => {
     setInputList(event.target.value);
