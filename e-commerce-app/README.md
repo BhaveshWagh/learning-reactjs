@@ -1,4 +1,4 @@
-## If you want to checkout click here : https://astonishing-frangipane-431bd8.netlify.app/product/18
+## If you want to checkout click here : https://astonishing-frangipane-431bd8.netlify.app/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
