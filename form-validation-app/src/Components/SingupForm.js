@@ -58,7 +58,7 @@ const SingupForm = () => {
 
       <label htmlFor="firstName">First Name </label>
       <input
-        id="firstName"
+        id="firstName"  
         name="firstName"
         type="text"
         onChange={formik.handleChange}
