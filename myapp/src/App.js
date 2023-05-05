@@ -1,50 +1,41 @@
 import "./App.css";
-import Employee from "./components/Employee";
+// import Main from "./components/Main";
+// import Employee from "./components/Employee";
+
+// Nested Object Desctruring and alies names 
+const employee = {
+  id: "ABC",
+  name: "Anthony",
+  salary: "$20 ",
+  address: {
+    salary: "$100",
+    street: "210 Washington Street",
+    country: "CANADA",
+    province: "Ontario",
+    zones: {
+      plantZone: "8A",
+      alienZone: "27",
+    },
+  },
+};
 
 function App() {
-  const employeeInfo = [
-    {
-      firstName: "Akshay",
-      lastName: "Winstin",
-      age: "23",
-      employeeId: "1",
-    },
-    {
-      firstName: "Sumit",
-      lastName: "pimple",
-      age: "30",
-      employeeId: "2",
-    },
-    {
-      firstName: "Vaibhav",
-      lastName: "Sundera",
-      age: "24",
-      employeeId: "3",
-    },
-    {
-      firstName: "Jasmin",
-      lastName: "Futera",
-      age: "25",
-      employeeId: "4",
-    },
-  ];
-
+  const { name, id, salary: empSalary, address: {street,country,addressSalary,province,zones:{plantZone,alienZone} } } = employee;
+  // const { street, salary: addressSalary, country, province, zones } = address;
+  // const { plantZone, alienZone } = zones;
   return (
     <div className="App">
       <header className="App-header">
-        <h1> Company Directory</h1>
-        {employeeInfo.map((employee) => {
-          // const { firstName, lastName, age } = employee;
-          return (
-            <Employee key={employee.employeeId} {...employee} />
-            /*<Employee firstName={firstName} lastName={lastName} age={age} />*/
-          );
-        })}
-
-        {/*<Employee firstName="Mayur" lastName="Patil" age="14" />
-        <Employee firstName="Dinesh" lastName="Ishi" age="15" />
-        <Employee firstName="Moreshwar" lastName="Wagh" age="16" />
-        <Employee firstName="Kapil" lastName="Wagh" age="17" /> */}
+        <h1>Namaskar React 🙏</h1>
+        <h3>{name}</h3>
+        <h3>{id}</h3>
+        <h3> empSalary : {empSalary}</h3>
+        <h3>addressSalary : {addressSalary}</h3>
+        <h3>
+          {/*{address.zones.palntZone} {address.street} {address.country} {address.province}*/}
+          {`The Employee Address: ${street}, ${country}, ${province}`}
+        </h3>
+        <h2>{`Plant Zone : ${plantZone}, Alien Zone:${alienZone}`}</h2>
       </header>
     </div>
   );
