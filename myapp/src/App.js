@@ -1,5 +1,6 @@
 import "./App.css";
-import Mapping from "./components/Mapping";
+// import Mapping from "./components/Mapping";
+import ConditionalRendering from "./components/ConditionalRendering";
 
 const employeeInfo = [
   {
@@ -23,9 +24,8 @@ const employeeInfo = [
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       Hello 
-      </header>
+      
+      
     </div>
   );
 }
