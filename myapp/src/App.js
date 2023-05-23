@@ -2,7 +2,7 @@ import React from "react";
 // import Counter from "./components/Counter";
 // import Mapping from "./components/Mapping";
 // import ConditionalRendering from "./components/ConditionalRendering";
-import Todos from "./components/Todos"
+import Todos from "./components/"
 import "./App.css";
 
 // const employeeInfo = [
