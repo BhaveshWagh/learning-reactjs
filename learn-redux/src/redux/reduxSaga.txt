@@ -1,0 +1,38 @@
+// Copy & Paste the below code into the App.js
+// For redux saga and Make sure to start express server 8081
+// expressHelloWorld // npm run start or node index.js
+
+import React, { useEffect } from "react";
+// import Counter from "./Components/Counter";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getUser } from "./redux/ducks/user";
+import axios from "axios";
+import "./App.css";
+
+function App() {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getUser());
+  // }, [dispatch]);
+
+  // const user = useSelector((state) => state.user.user);
+
+  // console.log(user);
+  const [user, setUser] = React.useState(undefined)
+useEffect(() => {
+  axios.get(`http://localhost:8081/user`).then((res) => {
+    const resonseUser = res.data;
+    setUser(resonseUser)
+  })
+}, [])
+  // const count = useSelector((state) => state.counter.count);
+  // const Voters = ["Bhavesh Wagh", "Hitesh Wagh", "Dipak Wagh"];
+  return (
+    <div className="App">
+      {user && <h1>Hello, {user.firstName}</h1>}
+      
+    </div>
+  );
+}
+
+export default App;

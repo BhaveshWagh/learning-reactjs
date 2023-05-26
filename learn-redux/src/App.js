@@ -2,36 +2,27 @@ import React, { useEffect } from "react";
 // import Counter from "./Components/Counter";
 // import { useDispatch, useSelector } from "react-redux";
 // import { getUser } from "./redux/ducks/user";
-import axios from "axios";
+// import axios from "axios";
 import "./App.css";
+import { useSelector,useDispatch } from "react-redux";
+import { decrement, increment } from "./reduxToolkit/CounterSlice";
 
 function App() {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getUser());
-  // }, [dispatch]);
-
-  // const user = useSelector((state) => state.user.user);
-
-  // console.log(user);
-  const [user, setUser] = React.useState(undefined)
-useEffect(() => {
-  axios.get(`http://localhost:8081/user`).then((res) => {
-    const resonseUser = res.data;
-    setUser(resonseUser)
-  })
-}, [])
-  // const count = useSelector((state) => state.counter.count);
-  // const Voters = ["Bhavesh Wagh", "Hitesh Wagh", "Dipak Wagh"];
+  const {count} = useSelector( state => state.counter );
+  const dispatch = useDispatch()
+  // console.log(count)  
   return (
     <div className="App">
-      {user && <h1>Hello, {user.firstName}</h1>}
-      
+      <h1>The Count is {count}</h1>
+      <button onClick={()=> dispatch(increment())}>Increment</button>
+      <button onClick={()=> dispatch(decrement())}>Decrement</button>
     </div>
   );
 }
 
 export default App;
+
+// {/*<div className="App">{user && <h1>Hello, {user.firstName}</h1>}</div>*/}
 
 // <Counter name="Bhavesh Wagh"/>
 //       <Counter name="Hitesh Wagh"/>
