@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Geolocate from "./Geolocate";
 import "react-toastify/dist/ReactToastify.css";
-import "./signup.css";
+// import "./signup.css";
 
 const Login = () => {
   const [namelog, setNamelog] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   // eslint-disable-next-line
   const [flag, setFlag] = useState(false);
   const [dash, setDash] = useState(true);
@@ -29,8 +29,10 @@ const Login = () => {
     } else {
       setDash(!dash);
       setFlag(false);
+      navigate("/login/locate");
     }
   };
+
   return (
     <div className="bag">
       <Container className="justify-content-center text-center height mid bag">
@@ -70,8 +72,8 @@ const Login = () => {
                 variant="primary"
                 size="sm"
               >
-                {" "}
-                Login{" "}
+                Login
+                {/* <Link to="/login/locate">Login</Link> */}
               </Button>
               <div>
                 <p>
