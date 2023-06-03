@@ -29,7 +29,7 @@ const Login = () => {
     } else {
       setDash(!dash);
       setFlag(false);
-      navigate("/login/locate");
+      navigate("/logged/locate");
     }
   };
 
@@ -78,7 +78,7 @@ const Login = () => {
               <div>
                 <p>
                   Don't have an account?
-                  <Link className="none" to="/signup">
+                  <Link className="link" to="/signup">
                     {" "}
                     Signup
                   </Link>

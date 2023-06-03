@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageNotFount = () => {
   return (
-    <div>
+    <div style={{color:"black"}}>
       Oops's PageNotFount
     </div>
   )

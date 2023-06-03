@@ -2,7 +2,12 @@ h1,
 h3 {
   font-style: oblique;
   text-align: center;
+  color: black;
 }
 div {
   height: "100vh";
+}
+.icon{
+  display: flex;
+  justify-content: center;
 }

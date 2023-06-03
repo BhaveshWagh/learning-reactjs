@@ -38,7 +38,7 @@ const SignUp = () => {
           {Login ? (
             <form onSubmit={handleSubmit}>
               <Col md="auto">
-                <h1>SignUp</h1>
+                <h1 style={{color:"white"}}>SignUp</h1>
               </Col>
               <div>
                 <input
@@ -72,7 +72,7 @@ const SignUp = () => {
               <div>
                 <p>
                   If you successfully done signup then click
-                  <Link className="none" to="/">
+                  <Link className="link" to="/">
                     {" "}
                     Login
                   </Link>
