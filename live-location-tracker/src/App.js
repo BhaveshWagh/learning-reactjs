@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="/logged/locate" element={<Geolocate />} />
         <Route path="*" element={<PageNotFount />} />
-        <Route path="/login/locate" element={<Geolocate />} />
       </Routes>
     </BrowserRouter>
   );

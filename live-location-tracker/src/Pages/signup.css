@@ -1,3 +1,12 @@
+
+:root{
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .mar{
     margin-top: 1rem;
 }
@@ -31,10 +40,13 @@
 }
 
 .bag{
-    background-color: #BFDBFE;
+    background-color: #424951;
 }
 
 .inp{
     border: px;
     border-radius: 0.2rem;
+}
+.link{
+    color: wheat;
 }
