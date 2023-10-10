@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
-import {BiLogOut} from "react-icons/bi"
+import { BiLogOut } from "react-icons/bi";
 import "./geolocate.css";
 
 mapboxgl.accessToken = process.env.REACT_APP_TOKEN;
@@ -31,7 +31,9 @@ const Geolocate = () => {
     <React.Fragment>
       <h1> Welcome to the Live Location tracker Web App </h1>
       <h3>Click on the top-right corner icon to get your live location.</h3>
-      <a className='icon' href='/'><BiLogOut size={30}/></a>
+      <a className="icon" href="/">
+        <BiLogOut size={30} />
+      </a>
       <div id="map" style={{ height: "100vh" }}></div>
     </React.Fragment>
   );
