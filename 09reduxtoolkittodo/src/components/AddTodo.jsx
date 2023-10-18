@@ -9,7 +9,7 @@ function AddTodo() {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-        dispatch(addTodo(input))
+        input === "" ? "" : dispatch(addTodo(input))
         setInput('')
     }
 
@@ -26,7 +26,8 @@ function AddTodo() {
         type="submit"
         className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
       >
-        Add Todo
+      AddTodo
+        {/* {AddTodo ? <>AddTodo</> : <>Update</>} */}
       </button>
     </form>
   )
