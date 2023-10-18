@@ -1,31 +1,45 @@
-import {createSlice, nanoid} from "@reduxjs/toolkit"
-// nanoid is unique id generator
+import {createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-    todos:[{id:1, text:"chai"}]
+    todos: [{id: 1, text: "Hello world"}]
 }
 
+
+
 export const todoSlice = createSlice({
-    name:'todo',
+    name: 'todo',
     initialState,
-    reducers:{
-        addTodo:(state, action) => {
+    reducers: {
+        addTodo: (state, action) => {
             const todo = {
-                id:nanoid(),
-                text:action.payload,
+                id: nanoid(), 
+                text: action.payload
             }
             state.todos.push(todo)
-        }, //remember: always you got to things 1.state 2.action
-        removeTodo: (state,action) => {
-            state.todos = state.todos.filter( (todo) => todo.id !== action.payload )
         },
-        updateTodo: (state,action) => {
-            state.todos = state.todos.map( (todo) => todo.id === action.payload )
-            console.log("update")
-        }
-    } // reducers have properties and functions
+        updateTodo:(state, action) => {
+            const {id, text} = action.payload
+            const isUpdate = state.todos.find( (todo) => todo.id === id)
+            // isUpdate ?  updateTodo.text = text : ""
+            if(isUpdate){
+                updateTodo.text = text
+            }
+        }, 
+        removeTodo: (state, action) => {
+            state.todos = state.todos.filter((todo) => todo.id !== action.payload )
+        },
+              
+    }
 })
-
+    
 export const {addTodo, removeTodo, updateTodo} = todoSlice.actions
 
 export default todoSlice.reducer
+
+// updateTodo: (state, action) => {
+//     const {id,text} = action.payload
+//     const todoToUpdate = state.todos.find( (todo) => todo.id === id)
+//     if(todoToUpdate){
+//         todToUpdate.text = text;//
+//     }
+// }
