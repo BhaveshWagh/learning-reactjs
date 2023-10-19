@@ -1,5 +1,8 @@
-import './App.css'
-import Todo from './components/TodoApp'
+import "./App.css";
+import Stopwatch from "./components/Stopwatch";
+// import Table from "./components/TableSort";
+// import Carousel from './components/Carousel'
+// import Todo from './components/TodoApp'
 // import Greeting from './components/ConditionalRend'
 // import DisplayListItem from './components/DisplayListItems'
 // import FormHandling from './components/FormHandling'
@@ -7,18 +10,20 @@ import Todo from './components/TodoApp'
 // import Search from './components/Search'
 
 function App() {
-
-
   return (
     <>
-    <Todo/>
-    {/* <Greeting/> */}
-    {/* <FormHandling/> */}
-    {/* <DisplayListItem/> */}
-    {/* <Search/> */}
-    {/* <SearchList/> */}
+    <h1>Interview Questions</h1>
+    <Stopwatch/>
+      {/* <Table /> */}
+      {/* <Carousel/> */}
+      {/* <Todo/> */}
+      {/* <Greeting/> */}
+      {/* <FormHandling/> */}
+      {/* <DisplayListItem/> */}
+      {/* <Search/> */}
+      {/* <SearchList/> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
