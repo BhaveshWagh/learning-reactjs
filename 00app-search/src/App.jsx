@@ -1,5 +1,6 @@
 import "./App.css";
-import Stopwatch from "./components/Stopwatch";
+import Cards from "./components/Cards";
+// import Stopwatch from "./components/Stopwatch";
 // import Table from "./components/TableSort";
 // import Carousel from './components/Carousel'
 // import Todo from './components/TodoApp'
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
     <h1>Interview Questions</h1>
-    <Stopwatch/>
+    <Cards/>
+    {/* <Stopwatch/> */}
       {/* <Table /> */}
       {/* <Carousel/> */}
       {/* <Todo/> */}
