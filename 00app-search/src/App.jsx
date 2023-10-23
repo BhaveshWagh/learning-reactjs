@@ -1,5 +1,7 @@
 import "./App.css";
-import Cards from "./components/Cards";
+
+import StarRating from "./components/StarRating" 
+// import Cards from "./components/Cards";
 // import Stopwatch from "./components/Stopwatch";
 // import Table from "./components/TableSort";
 // import Carousel from './components/Carousel'
@@ -14,7 +16,8 @@ function App() {
   return (
     <>
     <h1>Interview Questions</h1>
-    <Cards/>
+    <StarRating limit={5} rating={2} />
+    {/* <Cards/> */}
     {/* <Stopwatch/> */}
       {/* <Table /> */}
       {/* <Carousel/> */}
@@ -29,3 +32,14 @@ function App() {
 }
 
 export default App;
+
+
+
+// export default App;
+// import React, { useState } from 'react';
+// import StarRating from './components/StarRating';
+// import './style.css';
+// const App = () => {
+//   return <StarRating limit={5} rating={2} />;
+// };
+
