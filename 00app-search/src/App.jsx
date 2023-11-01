@@ -1,6 +1,7 @@
 import "./App.css";
+import { FetchApi } from "./components/FetchApi";
 
-import StarRating from "./components/StarRating" 
+// import StarRating from "./components/StarRating"
 // import Cards from "./components/Cards";
 // import Stopwatch from "./components/Stopwatch";
 // import Table from "./components/TableSort";
@@ -15,10 +16,11 @@ import StarRating from "./components/StarRating"
 function App() {
   return (
     <>
-    <h1>Interview Questions</h1>
-    <StarRating limit={5} rating={2} />
-    {/* <Cards/> */}
-    {/* <Stopwatch/> */}
+      <h1>Interview Questions</h1>
+      <FetchApi />
+      {/* <StarRating limit={5} rating={2} /> */}
+      {/* <Cards/> */}
+      {/* <Stopwatch/> */}
       {/* <Table /> */}
       {/* <Carousel/> */}
       {/* <Todo/> */}
@@ -33,8 +35,6 @@ function App() {
 
 export default App;
 
-
-
 // export default App;
 // import React, { useState } from 'react';
 // import StarRating from './components/StarRating';
@@ -42,4 +42,3 @@ export default App;
 // const App = () => {
 //   return <StarRating limit={5} rating={2} />;
 // };
-
