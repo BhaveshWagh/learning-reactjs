@@ -3,12 +3,18 @@ import { useState } from "react";
 // https://randomuser.me/api/
 export const FetchApi = () => {
   const [data, setData] = useState();
+  const [error, setError] = useState();
+
   const handleClick = async () => {
-    const response = await fetch("https://randomuser.me/api/");
+    try {
+      const response = await fetch("https://randomuser.me/api/");
 
-    const data = await response.json();
+      const data = await response.json();
 
-    setData(data.results);
+      setData(data.results);
+    } catch (error) {
+      setError("Error fetching user: " + error)
+    }
   };
 
   return (
@@ -17,6 +23,7 @@ export const FetchApi = () => {
 
       <button onClick={handleClick}>Click me</button>
       <div>
+      {error && <div>Error: {error}</div>}
         {data &&
           data.map((getData) => (
             <div key={getData.name.first}>
