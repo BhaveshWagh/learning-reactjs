@@ -13,7 +13,7 @@ export const FetchApi = () => {
 
       setData(data.results);
     } catch (error) {
-      setError("Error fetching user: " + error)
+      setError("Error fetching user: " + error);
     }
   };
 
@@ -23,7 +23,29 @@ export const FetchApi = () => {
 
       <button onClick={handleClick}>Click me</button>
       <div>
-      {error && <div>Error: {error}</div>}
+        {/* Now the error is handle effectively */}
+        {data
+          ? data &&
+            data.map((getData) => (
+              <div key={getData.name.first}>
+                <div>firstName : {getData.name.first}</div>
+                <div>lastName : {getData.name.last}</div>
+                <div>Gender : {getData.gender}</div>
+                <div>City : {getData.location.city}</div>
+                <div>Street : {getData.location.street.name}</div>
+              </div>
+            ))
+          : error && <div>Error: {error}</div>}
+      </div>
+    </>
+  );
+};
+
+{
+  /* It's not effective way to handle error */
+}
+{
+  /* {error && <div>Error: {error}</div>}
         {data &&
           data.map((getData) => (
             <div key={getData.name.first}>
@@ -33,8 +55,5 @@ export const FetchApi = () => {
               <div>City : {getData.location.city}</div>
               <div>Street : {getData.location.street.name}</div>
             </div>
-          ))}
-      </div>
-    </>
-  );
-};
+          ))} */
+}
