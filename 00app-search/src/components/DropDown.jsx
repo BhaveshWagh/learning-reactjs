@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const DropDown = () => {
-  const [state, setState] = useState("");
+  const [state, setState] = useState(0);
 
   const states = [
     {
@@ -30,15 +30,15 @@ const DropDown = () => {
           console.log(e.target.value);
         }}
       >
-        {states.map((item) => (
-          <option key={item.id}>{item.name}</option>
-        ))}
+        {states.map((item, index) => {
+         return <option value={index}>{item.name}</option>
+        })}
       </select>
 
       <select value={state}>
-        {states[state].cities.map((item, index) => (
-          <option key={index}>{item}</option>
-        ))}
+        {states[state].cities.map((item,index)=>{
+          return <option value={index}>{item}</option>
+        })}
       </select>
     </div>
   );
