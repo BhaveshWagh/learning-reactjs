@@ -1,6 +1,5 @@
-// import "./App.css";
-import TodoListDisplay from "./components/TodoListDisplay";
-// import DropDown from "./components/DropDown";
+import "./App.css";
+import DropDown from "./components/DropDown";
 
 // import StarRating from "./components/StarRating"
 // import Cards from "./components/Cards";
@@ -18,8 +17,7 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <TodoListDisplay />
-      {/* <DropDown /> */}
+      <DropDown />
       {/* <FetchApi /> */}
       {/* <StarRating limit={5} rating={2} /> */}
       {/* <Cards/> */}
