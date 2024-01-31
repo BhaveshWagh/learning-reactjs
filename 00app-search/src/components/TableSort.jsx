@@ -5,7 +5,6 @@ export default function Table() {
   const [tableData, setTableData] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  
   useEffect(() => {
     setLoading(true);
     setError(false);
