@@ -1,0 +1,21 @@
+* {
+  text-align: center;
+}
+table {
+  margin: auto;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.active{
+  color: purple;
+  font-size: x-large;
+}
+
+.header{
+  position: sticky;
+}
