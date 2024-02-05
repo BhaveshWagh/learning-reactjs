@@ -3,7 +3,9 @@
 }
 table {
   margin: auto;
+  margin-top: 20px;
 }
+
 table,
 th,
 td {
@@ -11,11 +13,27 @@ td {
   border-collapse: collapse;
 }
 
-.active{
+.active {
   color: purple;
   font-size: x-large;
 }
 
-.header{
+.header {
   position: sticky;
+}
+
+.btnSearch {
+  background-color: aqua;
+  margin: 2px;
+  padding: px;
+  margin-top:2px;
+  color: black;
+  border-radius: 2px;
+}
+
+
+.btnSearch:hover{
+  background-color: gray;
+  color: white;
+  cursor: pointer;
 }
