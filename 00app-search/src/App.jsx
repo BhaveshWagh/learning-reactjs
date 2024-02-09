@@ -1,5 +1,6 @@
-import "./App.css";
-import TodoSearch from "./components/TodoSearch";
+// import "./App.css";
+import ImageSlider from "./components/ImageSlider";
+// import TodoSearch from "./components/TodoSearch";
 // import DropDown from "./components/DropDown";
 
 // import StarRating from "./components/StarRating"
@@ -18,7 +19,8 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <TodoSearch />
+      <ImageSlider/>
+      {/* <TodoSearch /> */}
       {/* <DropDown /> */}
       {/* <FetchApi /> */}
       {/* <StarRating limit={5} rating={2} /> */}
