@@ -1,9 +1,10 @@
-// import "./App.css";
+import "./App.css";
 // import ImageSlider from "./components/ImageSlider";
 // import TodoSearch from "./components/TodoSearch";
 // import DropDown from "./components/DropDown";
 
-import Accordian from "./components/Accordian";
+// import Accordian from "./components/Accordian";
+// import PhotoGallery from "./components/PhotoGallery";
 
 // import SubmitPopUp from "./components/SubmitPopUp";
 
@@ -23,7 +24,8 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <Accordian />
+      {/* <PhotoGallery/> */}
+      {/* <Accordian /> */}
       {/* <SubmitPopUp /> */}
       {/* <ImageSlider/> */}
       {/* <TodoSearch /> */}
