@@ -1,13 +1,13 @@
 import "./App.css";
+
+import Checkbox from "./components/Checkbox";
+
 // import ImageSlider from "./components/ImageSlider";
 // import TodoSearch from "./components/TodoSearch";
 // import DropDown from "./components/DropDown";
-
 // import Accordian from "./components/Accordian";
 // import PhotoGallery from "./components/PhotoGallery";
-
 // import SubmitPopUp from "./components/SubmitPopUp";
-
 // import StarRating from "./components/StarRating"
 // import Cards from "./components/Cards";
 // import Stopwatch from "./components/Stopwatch";
@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
+      <Checkbox />
       {/* <PhotoGallery/> */}
       {/* <Accordian /> */}
       {/* <SubmitPopUp /> */}
