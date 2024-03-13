@@ -34,29 +34,24 @@ const Checkbox = () => {
     <div className="container my-4" style={{ width: "500px" }}>
       <form className="form w-100">
         <h3>Select Users</h3>
-        <div className="form-check">
+        <div>
           <input
             type="checkbox"
-            className="form-check-input"
             name="allSelect"
-            // checked={
-            //   users.filter((user) => user?.isChecked !== true).length < 1
-            // }
             checked={!users.some((user) => user?.isChecked !== true)}
             onChange={handleChange}
           />
-          <label className="form-check-label ms-2">All Select</label>
+          <label>All Select</label>
         </div>
         {users.map((user, index) => (
-          <div className="form-check" key={index}>
+          <div key={index}>
             <input
               type="checkbox"
-              className="form-check-input"
               name={user.name}
               checked={user?.isChecked || false}
               onChange={handleChange}
             />
-            <label className="form-check-label ms-2">{user.name}</label>
+            <label>{user.name}</label>
           </div>
         ))}
       </form>
