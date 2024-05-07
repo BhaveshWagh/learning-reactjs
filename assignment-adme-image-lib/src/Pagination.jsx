@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import "./pagination.style.css";
 
 const Pagination = () => {
   const [products, setProducts] = useState([]);
@@ -32,8 +31,6 @@ const Pagination = () => {
 
   return (
     <div>
-    
-
       {products.length > 0 && (
         <div className="m-5 p-0 grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {products?.slice(page * 10 - 10, page * 10).map((prod) => {
