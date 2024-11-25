@@ -1,7 +1,7 @@
 import "./App.css";
-import QuizApp from "./components/Quiz App/QuizApp";
 
-
+import Pagination from "./components/Pagination";
+// import QuizApp from "./components/Quiz App/QuizApp";
 // import Checkbox from "./components/Checkbox";
 // import ImageSlider from "./components/ImageSlider";
 // import TodoSearch from "./components/TodoSearch";
@@ -25,7 +25,8 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <QuizApp/>
+      <Pagination/>
+      {/* <QuizApp/> */}
       {/* <Checkbox /> */}
       {/* <PhotoGallery/> */}
       {/* <Accordian /> */}
