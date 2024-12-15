@@ -1,4 +1,5 @@
 import "./App.css";
+import InfiniteScroll from "./components/InfiniteScroll";
 
 import Pagination from "./components/Pagination";
 // import QuizApp from "./components/Quiz App/QuizApp";
@@ -25,7 +26,8 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <Pagination/>
+      <InfiniteScroll/>
+      {/* <Pagination/> */}
       {/* <QuizApp/> */}
       {/* <Checkbox /> */}
       {/* <PhotoGallery/> */}
