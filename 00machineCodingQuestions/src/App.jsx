@@ -1,7 +1,8 @@
 import "./App.css";
-import InfiniteScroll from "./components/InfiniteScroll";
+import HideSecondBtn from "./components/HideSecondBtn";
 
-import Pagination from "./components/Pagination";
+// import InfiniteScroll from "./components/InfiniteScroll";
+// import Pagination from "./components/Pagination";
 // import QuizApp from "./components/Quiz App/QuizApp";
 // import Checkbox from "./components/Checkbox";
 // import ImageSlider from "./components/ImageSlider";
@@ -26,7 +27,8 @@ function App() {
   return (
     <>
       <h1>Interview Questions</h1>
-      <InfiniteScroll/>
+      <HideSecondBtn />
+      {/* <InfiniteScroll/> */}
       {/* <Pagination/> */}
       {/* <QuizApp/> */}
       {/* <Checkbox /> */}
