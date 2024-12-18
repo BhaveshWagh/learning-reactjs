@@ -35,25 +35,24 @@ const Todo = () => {
         />
         <button onClick={handleAddTodo}>Add</button>
       </div>
-      
-        {todos.map((todo, index) => (
-          <li key={index}>
-            <input
-              type="checkbox"
-              checked={todo.completed}
-              onChange={() => handleToggleComplete(index)}
-            />
-            <span
-              style={{
-                textDecoration: todo.completed ? "line-through" : "none",
-              }}
-            >
-              {todo.text}
-            </span>
-            <button onClick={() => handleRemoveTodo(index)}>Remove</button>
-          </li>
-        ))}
-      
+
+      {todos.map((todo, index) => (
+        <li key={index}>
+          <input
+            type="checkbox"
+            checked={todo.completed}
+            onChange={() => handleToggleComplete(index)}
+          />
+          <span
+            style={{
+              textDecoration: todo.completed ? "line-through" : "none",
+            }}
+          >
+            {todo.text}
+          </span>
+          <button onClick={() => handleRemoveTodo(index)}>Remove</button>
+        </li>
+      ))}
     </div>
   );
 };

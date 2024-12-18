@@ -1,65 +1,31 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import HideSecondBtn from "./components/HideSecondBtn";
 
-// import InfiniteScroll from "./components/InfiniteScroll";
-// import Pagination from "./components/Pagination";
-// import QuizApp from "./components/Quiz App/QuizApp";
-// import Checkbox from "./components/Checkbox";
-// import ImageSlider from "./components/ImageSlider";
-// import TodoSearch from "./components/TodoSearch";
-// import DropDown from "./components/DropDown";
-// import Accordian from "./components/Accordian";
-// import PhotoGallery from "./components/PhotoGallery";
-// import SubmitPopUp from "./components/SubmitPopUp";
-// import StarRating from "./components/StarRating"
-// import Cards from "./components/Cards";
-// import Stopwatch from "./components/Stopwatch";
-// import Table from "./components/TableSort";
-// import Carousel from './components/Carousel'
-// import Todo from './components/TodoApp'
-// import Greeting from './components/ConditionalRend'
-// import DisplayListItem from './components/DisplayListItems'
-// import FormHandling from './components/FormHandling'
-// import SearchList from './components/SearchList'
-// import Search from './components/Search'
+
 
 function App() {
+  const [data, setData] = useState([])
+  useEffect(()=>{
+    getData();
+  }, [])
+  const getData = async () => {
+    const response = await fetch('https://dummyjson.com/todos')
+    const data = await response.json()
+    console.log(data.todos)
+    setData(data.todos)
+  }
   return (
     <>
       <h1>Interview Questions</h1>
-      <HideSecondBtn />
-      {/* <InfiniteScroll/> */}
-      {/* <Pagination/> */}
-      {/* <QuizApp/> */}
-      {/* <Checkbox /> */}
-      {/* <PhotoGallery/> */}
-      {/* <Accordian /> */}
-      {/* <SubmitPopUp /> */}
-      {/* <ImageSlider/> */}
-      {/* <TodoSearch /> */}
-      {/* <DropDown /> */}
-      {/* <FetchApi /> */}
-      {/* <StarRating limit={5} rating={2} /> */}
-      {/* <Cards/> */}
-      {/* <Stopwatch/> */}
-      {/* <Table /> */}
-      {/* <Carousel/> */}
-      {/* <Todo/> */}
-      {/* <Greeting/> */}
-      {/* <FormHandling/> */}
-      {/* <DisplayListItem/> */}
-      {/* <Search/> */}
-      {/* <SearchList/> */}
+     {data && data.splice(0,5).map((listItem)=>{
+      return(
+        <ul key={listItem.id}>
+          <li>{listItem.todo}</li>
+        </ul>
+      )
+     })}
     </>
   );
 }
 
 export default App;
-
-// export default App;
-// import React, { useState } from 'react';
-// import StarRating from './components/StarRating';
-// import './style.css';
-// const App = () => {
-//   return <StarRating limit={5} rating={2} />;
-// };
