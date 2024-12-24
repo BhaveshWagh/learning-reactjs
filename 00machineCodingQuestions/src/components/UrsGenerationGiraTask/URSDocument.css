@@ -1,0 +1,17 @@
+.description,
+.version {
+  margin-top: 5px;
+}
+
+.epic-info {
+  margin: auto;
+  background-color: #f1f1f1;
+  padding: 15px;
+  line-height: 2rem;
+  border-radius: 10px;
+  width: 80%;
+}
+
+ul {
+  list-style: none;
+}

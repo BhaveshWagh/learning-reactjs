@@ -1,0 +1,59 @@
+/* EpicSelector.css */
+.epic-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .selected-epic {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 3px;
+    background-color: #d3d3d3;
+    position: relative;
+  }
+  
+  .selected-epic button {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    min-width: 100px;
+  }
+  
+  .suggestions-list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background: white;
+    z-index: 1000;
+  }
+  
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f1f1f1;
+  }
+  
