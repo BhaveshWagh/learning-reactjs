@@ -1,0 +1,30 @@
+.card {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #70a03a;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color .5s;
+}
+
+button:hover {
+  background-color: #c1f590;
+}
+
+button:active {
+  background-color: #297910;
+}
