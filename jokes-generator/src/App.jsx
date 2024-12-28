@@ -20,8 +20,8 @@ function App() {
      
       <div className="card">
         <h1>Ramdom Joke Generator</h1>
-        <div>{joke.joke}</div>
         <button onClick={fetchJokesApi}> Generator Joke</button>
+        <div>{joke.joke}</div>
       </div>
     </>
   );
