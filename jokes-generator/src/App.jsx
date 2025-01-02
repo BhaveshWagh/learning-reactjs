@@ -17,11 +17,10 @@ function App() {
 
   return (
     <>
-     
       <div className="card">
         <h1>Ramdom Joke Generator</h1>
         <button onClick={fetchJokesApi}> Generator Joke</button>
-        <div>{joke.joke}</div>
+        <div className="text">{joke.joke}</div>
       </div>
     </>
   );
